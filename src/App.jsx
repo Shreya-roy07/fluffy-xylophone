@@ -1,37 +1,26 @@
 // App.js
 import React, { useState } from 'react';
 import './App.css';
-import Certificate from './Certificate';
+
+const Certificate = ({ name, school_name,class_no }) => {
+  return ( 
+      <div >
+        <p className="name"> {name}</p>
+        <p className="school_name"> {school_name}</p>
+        <p className="class"> {class_no} </p>
+      </div> 
+  );
+   
+};
 
 function App() {
-   const [studentName, setStudentName] = useState('');
-  const [studentAge, setStudentAge] = useState('');
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'name') {
-      setStudentName(value);
-    } else if (name === 'age') {
-      setStudentAge(value);
-    }
-  };
+  const [studentName, setStudentName] = useState('Shreya Roy');
+  const [studentSchool, setStudentSchool] = useState('Loyola high school');
+  const [studentClass, setStudentClass] = useState('12');
 
   return (
-  <div className="App">
-      <header className="App-header">
-        {/* Your header content goes here */}
-      </header>
-      <div className="input-container">
-        <label>
-          Name:
-          <input type="text" name="name" value={studentName} onChange={handleInputChange} />
-        </label>
-        <label>
-          Age:
-          <input type="text" name="age" value={studentAge} onChange={handleInputChange} />
-        </label>
-      </div>
-      <Certificate name={studentName} age={studentAge} />
+    <div className="App">
+      <Certificate name={studentName} school_name={studentSchool} class_no = {studentClass} />
     </div>
   );
 }
