@@ -1,0 +1,9 @@
+/* Certificate.css */
+.student-info {
+  margin-top: 20px;
+}
+
+.name-value,
+.age-value {
+  color: red; /* Change the color as needed */
+}
