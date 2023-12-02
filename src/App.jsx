@@ -1,14 +1,16 @@
+// App.js
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat.png"  />
-        
-        
-    
+        {/* Your header content goes here */}
       </header>
+      <p className='St_name'>
+        Shreya roy
+      </p>
     </div>
   );
 }
